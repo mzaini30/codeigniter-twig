@@ -1,10 +1,4 @@
-# Menjalankan
-
-```bash
-php -S localhost:9099
-```
-
-# Memanggil View Twig
+**Cara memanggil Twig lewat Controller**
 
 ```php
 $this->twig->display('tes_twig/hello_world');
