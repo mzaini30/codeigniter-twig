@@ -604,7 +604,8 @@ abstract class Template implements \Twig_TemplateInterface
 
         // object property
         if (self::METHOD_CALL !== $type && !$object instanceof self) { // \Twig\Template does not have public properties, and we don't want to allow access to internal ones
-            if (isset($object->$item) || \array_key_exists((string) $item, $object)) {
+            if (isset($object->$item)) {
+            // if (isset($object->$item) || \array_key_exists((string) $item, $object)) {
                 if ($isDefinedTest) {
                     return true;
                 }
